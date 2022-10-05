@@ -1,0 +1,279 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@200;300;400;500;600;700&family=Poppins&family=Amarante&family=Forum&family=Red+Rose&family=Fredoka+One&display=swap');
+*{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+div, pre, preserve, .poem, .letter{
+    overflow-x: auto;
+}
+html{
+       word-break: break-word;
+}
+body { 
+       text-align: justify;
+       background: #dedede;
+       color: #454545;
+       font-family: Red Rose;
+       word-break: break-word;
+       margin-left: 10%;
+       margin-right: 10%;
+}
+h1, h2, h3, h4, h5 {text-align: center; font-style: normal; font-weight: normal; line-height: 1.5; margin-top: .5em; margin-bottom: .5em; word-break: break-word;}
+
+h1 {font-size: 300%;
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    letter-spacing: 0.12em;
+    word-spacing: 0.2em;
+    text-indent: 0em;}
+h2 {font-size: 150%; margin-top: 2em; margin-bottom: 1em;}
+h3 {font-size: 130%; margin-top: 1em;}
+h4 {font-size: 120%;}
+h5 {font-size: 110%;}
+hr{
+    display: block;
+    margin: auto;
+}
+.fig, img{
+    display: none;
+    /*
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    */
+}
+.no-break {page-break-before: avoid;} /* for epubs */
+
+div.chapter {
+    page-break-before: always;
+    margin-top:14em;
+}
+
+p {text-indent: 1em;
+   margin-top: 1.25em;
+   margin-bottom: 1.25em;
+   letter-spacing: 1px;
+   line-height: 1.5;
+   font-size: 18px; }
+
+.p2 {margin-top: 2em;}
+
+p.poem {text-indent: 0%;
+        margin-left: 10%;
+        font-size: 90%;
+        margin-top: 2em;
+        margin-bottom: 2em; }
+
+p.letter {text-indent: 0%;
+          margin-left: 10%;
+          margin-right: 10%;
+          margin-top: 1em;
+          margin-bottom: 1em; }
+
+p.noindent {text-indent: 0% }
+
+p.center  {text-align: center;
+           text-indent: 0em;
+           margin-top: 1em;
+           margin-bottom: 1em; }
+
+p.right {text-align: right;
+         margin-right: 10%;
+         margin-top: 1em;
+         margin-bottom: 1em; }
+
+p.pfirst {text-indent: 0 }
+
+.small-caps       { font-variant: small-caps }
+
+span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+span.dropspan     { font-variant: small-caps }
+
+p.footnote {font-size: 90%;
+           text-indent: 0%;
+           margin-left: 10%;
+           margin-right: 10%;
+           margin-top: 1em;
+           margin-bottom: 1em; }
+
+sup { vertical-align: top; font-size: 0.6em; }
+
+a:link {color:white; text-decoration:none}
+a:visited {color:gray; text-decoration:none}
+a:hover {color:crimson}
+.chapter-container{
+    position: fixed;
+    height: 0%;
+    width: 100%;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(to right, #333, #222, #111);
+    z-index: 1;
+    color: #fff;
+}
+.chapters{
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+.chapters a{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 14px;
+    text-align: center;
+    width: 100%;
+    color: #F2F3F4;
+    text-decoration: underline;
+    font-family: Red Rose;
+    font-size: 18px;
+}
+.chapters table, tr, td, th{
+    display: grid;
+    text-align: center;
+    width: 100%;
+    color: silver;
+}
+.frame-container{
+    position: fixed;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    background: #111;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+.frame{
+    display: block;
+    margin: auto;
+    width: 90%;
+}
+.frame iframe{
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    border: 1px outset silver;
+}
+.frame button{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px outset silver;
+    font-family: Red Rose;
+    font-size: 16px;
+}
+.hide-chapters{
+    background: #111;
+    position: absolute;
+    border: 1px outset silver;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+}
+.to-top{
+    border-top-left-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background: #111;
+    padding: 18px 8px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+}
+.show-books{
+    border-bottom-left-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background: #111;
+    padding: 18px 8px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #fff;
+}
+.show-chapters{
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background: #111;
+    padding: 18px 8px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+}
+.go-home{
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background: #111;
+    padding: 18px 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+.light-dark{
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background: #111;
+    padding: 18px 8px;
+    position: fixed;
+    top: 80%;
+    right: 0;
+    color: #fff;
+}
+.show-hide{
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    border: none;
+    background: #111;
+    padding: 18px 8px;
+    position: fixed;
+    top: 80%;
+    left: 0;
+    color: #fff;
+}
+.light-to-dark{
+    background: #202020;
+    color: #acacac;
+}
+.light-to-dark button{
+    background: #fff;
+    color: #000;
+}
+.hide #btn{
+    display: none;
+}
+.hide .show-hide{
+    opacity: 0.5;
+}
