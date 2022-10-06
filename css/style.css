@@ -2,12 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@200;300;400;500;600;700&family=Poppins&family=Amarante&family=Forum&family=Red+Rose&family=Fredoka+One&display=swap');
 *{
     scroll-behavior: smooth;
+    font-family: Red Rose;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
+div::-webkit-scrollbar{
+    display: none!important;
+}
 div, pre, preserve, .poem, .letter{
     overflow-x: auto;
+}
+pre, preserve, img, .fig, .figleft, .figcenter, .figright, .figtop, .figbottom, table, ul, li, tr, td, th, dd, dt, dl, a, hr{
+    width: 100%!important;
 }
 html{
        word-break: break-word;
@@ -16,12 +23,10 @@ body {
        text-align: justify;
        background: #dedede;
        color: #454545;
-       font-family: Red Rose;
-       word-break: break-word;
        margin-left: 10%;
        margin-right: 10%;
 }
-h1, h2, h3, h4, h5 {text-align: center; font-style: normal; font-weight: normal; line-height: 1.5; margin-top: .5em; margin-bottom: .5em; word-break: break-word;}
+h1, h2, h3, h4, h5 {text-align: center; font-style: normal; font-weight: normal; line-height: 1.5; margin-top: .5em; margin-bottom: .5em; word-break: break-word;overflow-x:auto;}
 
 h1 {font-size: 300%;
     margin-top: 0.6em;
@@ -101,9 +106,9 @@ p.footnote {font-size: 90%;
 
 sup { vertical-align: top; font-size: 0.6em; }
 
-a:link {color:white; text-decoration:none}
+a:link {color:dodgerblue; text-decoration:none}
 a:visited {color:gray; text-decoration:none}
-a:hover {color:crimson}
+a:hover {color:crimson;}
 .chapter-container{
     position: fixed;
     height: 0%;
@@ -116,12 +121,11 @@ a:hover {color:crimson}
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(to right, #333, #222, #111);
+    background: #181818;
     z-index: 1;
     color: #fff;
 }
 .chapters{
-    display: block;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -138,10 +142,10 @@ a:hover {color:crimson}
     padding: 14px;
     text-align: center;
     width: 100%;
-    color: #F2F3F4;
-    text-decoration: underline;
+    color: linear-gradient(to right, blue, dodgerblue, #1161dd);
     font-family: Red Rose;
     font-size: 18px;
+    font-weight: bolder;
 }
 .chapters table, tr, td, th{
     display: grid;
@@ -276,4 +280,10 @@ a:hover {color:crimson}
 }
 .hide .show-hide{
     opacity: 0.5;
+}
+@media screen and (min-width: 700px){
+    body{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
